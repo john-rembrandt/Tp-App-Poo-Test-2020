@@ -6,6 +6,8 @@ class VueSelection
 
     public $news = [];
     
+    public $content;
+    
     public function affichageVue($news)
     {
         
@@ -13,9 +15,9 @@ class VueSelection
         
         ob_start();
         require $this->vue;
-        $content = ob_get_clean();
+        $this->content = ob_get_clean();
         
-        echo $content;
+        echo $this->content;
         
         //ps: ajouter les instuction pour le cache avec "ob_get_content" 
     }

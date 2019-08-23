@@ -36,7 +36,7 @@ class IndexController
             $this->vueSelection->affichageVue($this->donnee->getSelection());
             
             
-            $this->cacheIndex->creerCache($this->cacheIndex->fichierCache, $this->donnee->getSelection());  
+            $this->cacheIndex->creerCache($this->cacheIndex->fichierCache, $this->vueSelection->content); //$this->donnee->getSelection());  
             
         }
     }
