@@ -26,7 +26,10 @@ class Model
         
         $this->selection = $this->selectionBase($this->bdd->getMysqlConnexion());
         $this->selection->execute();
-        $this->donnees = $this->selection->fetch(PDO::FETCH_ASSOC);
+        $this->selection->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'News');
+        
+        $this->donnees = $this->selection->fetch();
+        //$this->donnees = $this->selection->fetch(PDO::FETCH_ASSOC);
         return $this->donnees;
         
     }

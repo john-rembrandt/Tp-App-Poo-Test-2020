@@ -6,11 +6,11 @@
             
         
             echo'<div class="news">
-                <h3>'.$donnees.' : '.$value.'</h3>';
+                <h3>'.$donnees.' : '.$value.'</h3></div>';
              
         }
-        /*
         
+        /*
         while ($donnees = $news)//$selection->fetch(PDO::FETCH_ASSOC))
         {
             echo'<div class="news">
