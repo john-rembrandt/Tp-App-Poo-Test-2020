@@ -2,7 +2,7 @@
 
 require 'Model.php';
 require 'Cache.php';
-require 'VueSelection.php';
+require 'Page.php';
 
 class IndexController
 {
@@ -12,14 +12,14 @@ class IndexController
 
     public $cacheIndex;
     
-    public $vueSelection;
+    public $page;
 
     public function __CONSTRUCT()
     {
         $this->bdd = new PDOFactory();
         $this->donnee = new Model();
         $this->cacheIndex = new Cache();
-        $this->vueSelection = new VueSelection();
+        $this->page = new Page();
         
     }
 
@@ -33,11 +33,11 @@ class IndexController
         else
         {
            
-            $this->vueSelection->affichageVue($this->donnee->getSelection());
+            $this->page->affichageVue($this->donnee->getSelection());
             
             
-            $this->cacheIndex->creerCache($this->cacheIndex->fichierCache, $this->vueSelection->content); //$this->donnee->getSelection());  
-            
+            $this->cacheIndex->creerCache($this->cacheIndex->fichierCache, $this->page->content); //$this->donnee->getSelection());  
         }
-    }
+      }
+    
 }

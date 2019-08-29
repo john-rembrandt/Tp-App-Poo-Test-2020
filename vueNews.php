@@ -1,14 +1,21 @@
 <?php
         echo ('<p>hello world<p>');
         
-        foreach($news as $donnees => $value)
+        foreach($news as $donnee)
         {
             
-        
-            echo'<div class="news">
-                <h3>'.$donnees.' : '.$value.'</h3></div>';
-             
+        foreach($donnee as $donnees)
+        {
+            
+           echo'<div class="news">
+             <h3>'.$donnees.'</h3></div>';
+            
+           //echo'<div class="news">
+            //<h3>'.$donnees[''].' : '.$value.'</h3></div>';
         }
+        }
+        
+      
         
         /*
         while ($donnees = $news)//$selection->fetch(PDO::FETCH_ASSOC))

@@ -1,6 +1,7 @@
 <?php
+require 'EntityModel.php';
 
-class NewsModel
+class NewsModel extends EntityModel
 {
     /*
     protected $erreurs = [],
@@ -19,7 +20,9 @@ class NewsModel
     public $dateAjout;
     public $dateModif;
     
-    public function __construct($id, $auteur, $titre, $contenu, $dateAjout, $dateModif)
+    /*
+     
+    public function __construct(array $donnees = [])
     {
         
         $this->setId($id);
@@ -29,8 +32,30 @@ class NewsModel
         $this->setDateAjout($dateAjout);
         $this->setDateModif($dateModif);
         
+        
+        $this->hydrate($donnees);
+     }
+      
+     */
+     
+    /* 
+       
+    public function hydrate(array $donnees)
+    {
+        foreach ($donnees as $attribut => $valeur)
+        {
+            $methode = 'set'.ucfirst($attribut);
+            
+            if (is_callable([$this, $methode]))
+            {
+                $this->$methode($valeur);
+            }
+        }
     }
-
+    
+    */
+        
+        
     /**
      * @return mixed
      */
