@@ -1,5 +1,7 @@
 <?php
 
+namespace ProjetDeCache;
+
 class Cache
 {
     public $fichierCache = 'Cache/cache.html';

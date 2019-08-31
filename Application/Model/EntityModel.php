@@ -1,5 +1,7 @@
 <?php
 
+namespace ProjetDeCache;
+
 abstract class EntityModel implements \ArrayAccess
 {
   protected $erreurs = [],

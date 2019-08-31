@@ -1,6 +1,11 @@
 <?php
-require 'PDOFactory.php';
-require 'NewsModel.php';
+
+namespace ProjetDeCache;
+
+use PDO;
+
+//require 'PDOFactory.php';
+//require 'NewsModel.php';
 
 class Model
 {

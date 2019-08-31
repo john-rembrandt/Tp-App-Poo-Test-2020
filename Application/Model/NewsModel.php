@@ -1,5 +1,8 @@
 <?php
-require 'EntityModel.php';
+
+namespace ProjetDeCache;
+
+//require 'EntityModel.php';
 
 class NewsModel extends EntityModel
 {

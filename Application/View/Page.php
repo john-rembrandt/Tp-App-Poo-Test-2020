@@ -1,5 +1,7 @@
 <?php
 
+namespace ProjetDeCache;
+
 class Page
 {
     public $vue = __DIR__.'\vueNews.php';

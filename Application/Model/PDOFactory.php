@@ -1,5 +1,7 @@
 <?php
 
+namespace ProjetDeCache;
+
 class PDOFactory
 {
   public static function getMysqlConnexion()

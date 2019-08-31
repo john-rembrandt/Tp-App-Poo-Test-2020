@@ -1,8 +1,9 @@
 <?php
+namespace ProjetDeCache;
 
-require 'Model.php';
-require 'Cache.php';
-require 'Page.php';
+//require 'Model.php';
+//require 'Cache.php';
+//require 'Page.php';
 
 class IndexController
 {
@@ -15,7 +16,7 @@ class IndexController
     public $page;
 
     public function __CONSTRUCT()
-    {
+    {  
         $this->bdd = new PDOFactory();
         $this->donnee = new Model();
         $this->cacheIndex = new Cache();
