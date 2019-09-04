@@ -1,11 +1,8 @@
 <?php
 
-namespace ProjetDeCache;
+namespace Application\Model;
 
 use PDO;
-
-//require 'PDOFactory.php';
-//require 'NewsModel.php';
 
 class Model
 {
@@ -31,14 +28,15 @@ class Model
     {
         
         $this->selection = $this->selectionBase($this->bdd->getMysqlConnexion());
+        
         $this->selection->execute();
+        
         $this->selection->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'NewsModel');
         
-        $this->donnees = $this->selection->fetchAll();
-        //$this->donnees = $this->selection->fetch(PDO::FETCH_ASSOC);
+        //$this->donnees = $this->selection->fetchAll();
         
-        //$newsHydrate = new NewsModel($this->donnees);
-        return $this->donnees;
+        //return $this->donnees;
+        return $this->selection->fetchAll();
     }
 }
        

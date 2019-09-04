@@ -1,16 +1,10 @@
 <?php
 
-require ('SplClassLoader.php');
-$OCFramLoader = new SplClassLoader('ProjetDeCache');
+require ('../Application/Vendor/SplClassLoader.php');
+$OCFramLoader = new SplClassLoader('Application', '../');
 $OCFramLoader->register();
 
-use ProjetDeCache\IndexController;
+use Application\Controller\IndexController;
 
 $index = new IndexController();
 $index->executeIndex();
-/*
-function my_autoload ($pClassName) {
-        include(__DIR__ . "/" . $pClassName . ".php");
-    }
-    spl_autoload_register("my_autoload");
-*/

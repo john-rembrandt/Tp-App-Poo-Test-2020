@@ -1,6 +1,6 @@
 <?php
 
-namespace ProjetDeCache;
+namespace Application\Model;
 
 abstract class EntityModel implements \ArrayAccess
 {

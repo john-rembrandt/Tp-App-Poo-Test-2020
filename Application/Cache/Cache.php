@@ -1,10 +1,10 @@
 <?php
 
-namespace ProjetDeCache;
+namespace Application\Cache;
 
 class Cache
 {
-    public $fichierCache = 'Cache/cache.html';
+    public $fichierCache = __DIR__.'\cache.html';
     
     
     public $donnee;

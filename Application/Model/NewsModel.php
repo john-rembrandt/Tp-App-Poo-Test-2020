@@ -1,21 +1,10 @@
 <?php
 
-namespace ProjetDeCache;
+namespace Application\Model;
 
-//require 'EntityModel.php';
 
 class NewsModel extends EntityModel
-{
-    /*
-    protected $erreurs = [],
-    $id,
-    $auteur,
-    $titre,
-    $contenu,
-    $dateAjout,
-    $dateModif;
-    */
-    
+{   
     public $id;
     public $auteur;
     public $titre;
@@ -23,40 +12,7 @@ class NewsModel extends EntityModel
     public $dateAjout;
     public $dateModif;
     
-    /*
-     
-    public function __construct(array $donnees = [])
-    {
-        
-        $this->setId($id);
-        $this->setAuteur($auteur);
-        $this->setTitre($titre);
-        $this->setContenu($contenu);
-        $this->setDateAjout($dateAjout);
-        $this->setDateModif($dateModif);
-        
-        
-        $this->hydrate($donnees);
-     }
-      
-     */
-     
-    /* 
-       
-    public function hydrate(array $donnees)
-    {
-        foreach ($donnees as $attribut => $valeur)
-        {
-            $methode = 'set'.ucfirst($attribut);
-            
-            if (is_callable([$this, $methode]))
-            {
-                $this->$methode($valeur);
-            }
-        }
-    }
     
-    */
         
         
     /**

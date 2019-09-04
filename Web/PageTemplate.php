@@ -8,21 +8,13 @@
 </head>
 
 <body>
-
-    
    
 <?php
     
-    require ('bootstrap.php');
-    /*
-    include 'IndexController.php';
-    $index = new IndexController();
-    $index->executeIndex();
-    */
-?>
-
-
+    require_once 'bootstrap.php';
     
+?>
+   
 </body>
 
 </html>
