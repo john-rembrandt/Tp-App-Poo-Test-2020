@@ -9,12 +9,13 @@
 
 <body>
    
-<?php
+<?php 
     
-    require_once 'bootstrap.php';
+    //require_once 'bootstrap.php';
+    $content; 
     
-?>
-   
+
+?>  
 </body>
 
 </html>
