@@ -12,6 +12,8 @@ class Model
     
     public $bdd;
     
+    public $news;
+    
     public function __CONSTRUCT()
     {
         $this->bdd = new PDOFactory();
@@ -36,7 +38,7 @@ class Model
         //$this->donnees = $this->selection->fetchAll();
         
         //return $this->donnees;
-        return $this->selection->fetchAll();
+        return $this->news = $this->selection->fetchAll();
     }
 }
        

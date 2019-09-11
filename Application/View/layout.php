@@ -8,10 +8,10 @@
 </head>
 
 <body>
-   
+   <p>page layout.php</p>
 <?php 
     
-    //require_once 'bootstrap.php';
+    
     $content; 
     
 

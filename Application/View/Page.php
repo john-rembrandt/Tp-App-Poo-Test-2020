@@ -17,17 +17,20 @@ class Page
         extract($news);
         
         ob_start();
-        require $this->vue;
+        require __DIR__.'\vueNews.php';
+        require __DIR__.'\layout.php';
         $this->content = ob_get_clean();
-        /*
-        ob_start();
-        require $this->layout;
-        return ob_get_clean();
-        */
+        
         echo $this->content;
+        
+        //ob_start();
+        //require __DIR__.'\layout.php';
+        //return ob_get_flush();
+        
+        //echo $this->content;
         
         //ps: ajouter les instuction pour le cache avec "ob_get_content" 
         //      modifier le traitement des donnees dans la vue
-        // voir aussi arrayAcess
+        // voir aussi arrayAccess
     }
 }

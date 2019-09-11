@@ -2,7 +2,6 @@
 
 namespace Application\Model;
 
-
 class NewsModel extends EntityModel
 {   
     public $id;
