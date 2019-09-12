@@ -4,7 +4,7 @@ namespace Application\Controller;
 use Application\Cache\Cache;
 use Application\Model\Model;
 //use Application\Model\PDOFactory;
-use Application\View\Page;
+use Lib\Page;
 
 class IndexController
 {

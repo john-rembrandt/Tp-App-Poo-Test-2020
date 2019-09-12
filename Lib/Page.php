@@ -1,13 +1,11 @@
 <?php
 
-namespace Application\View;
+namespace Lib;
 
 
 class Page
 {
-    public $vue = __DIR__.'\vueNews.php';
     
-    public $layout = __DIR__.'\layout.php';
     
     public $content;
     
@@ -17,8 +15,9 @@ class Page
         extract($news);
         
         ob_start();
-        require __DIR__.'\vueNews.php';
-        require __DIR__.'\layout.php';
+        require __DIR__.'\..\Application\View\vueNews.php';
+        require __DIR__.'\..\Application\View\layout.php';
+        
         $this->content = ob_get_clean();
         
         echo $this->content;

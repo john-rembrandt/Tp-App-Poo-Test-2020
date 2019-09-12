@@ -1,6 +1,6 @@
 <?php
 
-namespace Application\Model;
+namespace Lib;
 
 class PDOFactory
 {
