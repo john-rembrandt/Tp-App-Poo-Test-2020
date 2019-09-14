@@ -4,8 +4,8 @@ require ('../Application/Vendor/SplClassLoader.php');
 $OCFramLoader = new SplClassLoader('Application', '../');
 $OCFramLoader->register();
 
-$OCFramLoader = new SplClassLoader('Lib', '../');
-$OCFramLoader->register();
+$LibLoader = new SplClassLoader('Lib', '../');
+$LibLoader->register();
 
 use Application\Controller\IndexController;
 

@@ -11,19 +11,57 @@
           <p>y a encore de la brume sur la poo !</p>
           <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="Css/style.css" type="text/css" />
-  <title>Page de test de cache en php !</title>
-</head>
-
-<body>
-   <p>page layout.php</p>
+  <head>
+    <title>
+      De La Balle    </title>
+    
+    <meta charset="utf-8" />
+    
+    <link rel="stylesheet" href="/css/Envision.css" type="text/css" />
+  </head>
   
-</body>
-
+  <body>
+    <div id="wrap">
+      <header>
+        <h1><a href="/">Appli et cache en php</a></h1>
+        <p>Comment ça, il n'y a presque rien ?</p>
+      </header>
+      
+      <nav>
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          
+        </ul>
+      </nav>
+      
+      <div id="content-wrap">
+        <section id="main">
+          <!--?php if ($user->hasFlash()) echo '<p style="text-align: center;">', $user->getFlash(), '</p>'; ?> -->
+          
+          <br />
+<font size='1'><table class='xdebug-error xe-notice' dir='ltr' border='1' cellspacing='0' cellpadding='1'>
+<tr><th align='left' bgcolor='#f57900' colspan="5"><span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span> Notice: Undefined variable: content in C:\wamp64\www\Projet-de-cache-en-php3\Application\View\layout.php on line <i>31</i></th></tr>
+<tr><th align='left' bgcolor='#e9b96e' colspan='5'>Call Stack</th></tr>
+<tr><th align='center' bgcolor='#eeeeec'>#</th><th align='left' bgcolor='#eeeeec'>Time</th><th align='left' bgcolor='#eeeeec'>Memory</th><th align='left' bgcolor='#eeeeec'>Function</th><th align='left' bgcolor='#eeeeec'>Location</th></tr>
+<tr><td bgcolor='#eeeeec' align='center'>1</td><td bgcolor='#eeeeec' align='center'>0.0002</td><td bgcolor='#eeeeec' align='right'>402296</td><td bgcolor='#eeeeec'>{main}(  )</td><td title='C:\wamp64\www\Projet-de-cache-en-php3\Web\bootstrap.php' bgcolor='#eeeeec'>...\bootstrap.php<b>:</b>0</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>2</td><td bgcolor='#eeeeec' align='center'>0.0009</td><td bgcolor='#eeeeec' align='right'>408384</td><td bgcolor='#eeeeec'>Application\Controller\IndexController->executeIndex(  )</td><td title='C:\wamp64\www\Projet-de-cache-en-php3\Web\bootstrap.php' bgcolor='#eeeeec'>...\bootstrap.php<b>:</b>13</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>3</td><td bgcolor='#eeeeec' align='center'>0.0063</td><td bgcolor='#eeeeec' align='right'>452568</td><td bgcolor='#eeeeec'>Lib\Page->affichageVue(  )</td><td title='C:\wamp64\www\Projet-de-cache-en-php3\Application\Controller\IndexController.php' bgcolor='#eeeeec'>...\IndexController.php<b>:</b>38</td></tr>
+<tr><td bgcolor='#eeeeec' align='center'>4</td><td bgcolor='#eeeeec' align='center'>0.0067</td><td bgcolor='#eeeeec' align='right'>469656</td><td bgcolor='#eeeeec'>require( <font color='#00bb00'>'C:\wamp64\www\Projet-de-cache-en-php3\Application\View\layout.php'</font> )</td><td title='C:\wamp64\www\Projet-de-cache-en-php3\Lib\Page.php' bgcolor='#eeeeec'>...\Page.php<b>:</b>18</td></tr>
+<tr><th colspan='5' align='left' bgcolor='#e9b96e'>Dump <i>$_GET</i></th></tr>
+<tr><th colspan='5' align='left' bgcolor='#e9b96e'>Dump <i>$_POST</i></th></tr>
+<tr><th colspan='5' align='left' bgcolor='#e9b96e'>Dump <i>$_FILES</i></th></tr>
+<tr><th colspan='5' align='left' bgcolor='#e9b96e'>Dump <i>$_ENV</i></th></tr>
+<tr><th colspan='5' align='left' bgcolor='#e9b96e'>Dump <i>$_SESSION</i></th></tr>
+<tr><th colspan='5' align='left' bgcolor='#e9b96e'>Dump <i>$_REQUEST</i></th></tr>
+<tr><th align='left' colspan='5' bgcolor='#e9b96e'>Variables in local scope (#4)</th></tr>
+<tr><td colspan='2' align='right' bgcolor='#eeeeec' valign='top'><pre>$content&nbsp;=</pre></td><td colspan='3' bgcolor='#eeeeec' valign='top'><i>Undefined</i></td></tr>
+</table></font>
+        </section>
+      </div>
+    
+      <footer></footer>
+    </div>
+  </body>
 </html>
-
 
 

@@ -24,7 +24,7 @@ class Model
     
     public function selectionBase($db)
     {
-        $selection = $db->query('SELECT id, auteur, titre, contenu, dateAjout, dateModif FROM news ORDER BY id DESC LIMIT 0, 5');
+        $selection = $db->prepare('SELECT id, auteur, titre, contenu, dateAjout, dateModif FROM news ORDER BY id DESC LIMIT 0, 5');
         return $selection;
     }
     

@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="Css/style.css" type="text/css" />
-  <title>Page de test de cache en php !</title>
-</head>
-
-<body>
-   <p>page layout.php</p>
-<?php 
+  <head>
+    <title>
+      <?= 'De La Balle' ?>
+    </title>
     
+    <meta charset="utf-8" />
     
-    $content; 
+    <link rel="stylesheet" href="/css/Envision.css" type="text/css" />
+  </head>
+  
+  <body>
+    <div id="wrap">
+      <header>
+        <h1><a href="/">Appli et cache en php</a></h1>
+        <p>Comment ça, il n'y a presque rien ?</p>
+      </header>
+      
+      <nav>
+        <ul>
+          <li><a href="/">Accueil</a></li>
+          
+        </ul>
+      </nav>
+      
+      <div id="content-wrap">
+        <section id="main">
+          <!--?php if ($user->hasFlash()) echo '<p style="text-align: center;">', $user->getFlash(), '</p>'; ?> -->
+          
+          <?= $content; ?>
+        </section>
+      </div>
     
-
-?>  
-</body>
-
+      <footer></footer>
+    </div>
+  </body>
 </html>
-
 
 

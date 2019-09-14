@@ -5,8 +5,7 @@ namespace Lib;
 
 class Page
 {
-    
-    
+     
     public $content;
     
     public function affichageVue($news)
