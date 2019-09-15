@@ -18,7 +18,7 @@ class Model
     
     public function __CONSTRUCT()
     {
-        $this->bdd = new PDOFactory();
+        $this->bdd = new PDOFactory();   
     }
     
     
@@ -43,7 +43,7 @@ class Model
         
         $this->liste->execute();
         
-        $this->liste->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'NewsModel');
+        //$this->liste->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'NewsModel');
         
         
         return $this->liste->fetchAll();
@@ -58,7 +58,7 @@ class Model
         
         $this->comments->execute();
         
-        $this->comments->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'CommentsModel');
+        //$this->comments->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'CommentsModel');
         
         return $this->comments->fetchAll();
          

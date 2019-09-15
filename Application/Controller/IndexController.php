@@ -3,12 +3,10 @@ namespace Application\Controller;
 
 use Application\Cache\Cache;
 use Application\Model\Model;
-//use Application\Model\PDOFactory;
 use Lib\Page;
 
 class IndexController
 {
-    //public $bdd;
     
     public $donnee;
 
@@ -18,7 +16,7 @@ class IndexController
 
     public function __CONSTRUCT()
     {  
-        //$this->bdd = new PDOFactory();
+        
         $this->donnee = new Model();
         $this->cacheIndex = new Cache();
         $this->page = new Page();
@@ -34,10 +32,7 @@ class IndexController
         }
         else
         {
-           
-            //$this->page->affichageVue($this->donnee->getSelection());
-            
-            
+             
             $this->cacheIndex->creerCache($this->cacheIndex->fichierCache, $this->page->affichageVue($this->donnee->getSelectionCommentaire()));  
         }
       }
