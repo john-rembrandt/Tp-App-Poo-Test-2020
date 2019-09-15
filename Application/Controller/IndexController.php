@@ -35,10 +35,10 @@ class IndexController
         else
         {
            
-            $this->page->affichageVue($this->donnee->getSelection());
+            //$this->page->affichageVue($this->donnee->getSelection());
             
             
-            $this->cacheIndex->creerCache($this->cacheIndex->fichierCache, $this->page->content);  
+            $this->cacheIndex->creerCache($this->cacheIndex->fichierCache, $this->page->affichageVue($this->donnee->getSelectionCommentaire()));  
         }
       }
     

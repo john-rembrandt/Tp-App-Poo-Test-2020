@@ -8,13 +8,13 @@ use Lib\PDOFactory;
 
 class Model
 {
-    public $selection;
+    public $liste;
     
-    public $donnees;
+    public $comments;
     
     public $bdd;
     
-    public $news;
+    
     
     public function __CONSTRUCT()
     {
@@ -22,25 +22,46 @@ class Model
     }
     
     
-    public function selectionBase($db)
+    public function selectionListe($db)
     {
-        $selection = $db->prepare('SELECT id, auteur, titre, contenu, dateAjout, dateModif FROM news ORDER BY id DESC LIMIT 0, 5');
-        return $selection;
+        $liste = $db->prepare('SELECT id, auteur, titre, contenu, dateAjout, dateModif FROM news ORDER BY id DESC LIMIT 0, 5');
+        return $liste;
+    }
+    public function selectionCommentaire($db)
+    {
+      
+        $comments = $db->prepare('SELECT id, news, auteur, contenu, date FROM comments');
+        return $comments;
+        
+       
     }
     
-    public function getSelection()
+    public function getSelectionListe()
     {
         
-        $this->selection = $this->selectionBase($this->bdd->getMysqlConnexion());
+        $this->liste = $this->selectionListe($this->bdd->getMysqlConnexion());
         
-        $this->selection->execute();
+        $this->liste->execute();
         
-        $this->selection->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'NewsModel');
+        $this->liste->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'NewsModel');
         
-        //$this->donnees = $this->selection->fetchAll();
         
-        //return $this->donnees;
-        return $this->news = $this->selection->fetchAll();
+        return $this->liste->fetchAll();
+    }
+    
+    public function getSelectionCommentaire()
+    {
+        
+        $this->comments = $this->selectionCommentaire($this->bdd->getMysqlConnexion());
+        
+        //$this->comments->bindValue(':news', $this->comments, \PDO::PARAM_INT);
+        
+        $this->comments->execute();
+        
+        $this->comments->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'CommentsModel');
+        
+        return $this->comments->fetchAll();
+         
     }
 }
        

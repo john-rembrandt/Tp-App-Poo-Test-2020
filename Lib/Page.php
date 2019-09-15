@@ -5,8 +5,9 @@ namespace Lib;
 
 class Page
 {
-     
-    public $content;
+    public $commentsFile = __DIR__.'\..\Application\View\vueComments.php';
+    public $contentFile = __DIR__.'\..\Application\View\vueNews.php';
+    public $contentCache;
     
     public function affichageVue($news)
     {
@@ -14,12 +15,16 @@ class Page
         extract($news);
         
         ob_start();
-        require __DIR__.'\..\Application\View\vueNews.php';
+        require $this->commentsFile;
+        //equire $this->contentFile;
+        $content = ob_get_clean();
+         
+        
+        ob_start();
+        //$this->content;
         require __DIR__.'\..\Application\View\layout.php';
         
-        $this->content = ob_get_clean();
-        
-        echo $this->content;
+        return ob_get_flush();
         
         //ob_start();
         //require __DIR__.'\layout.php';

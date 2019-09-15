@@ -1,6 +1,6 @@
 <?php
 
-require ('../Application/Vendor/SplClassLoader.php');
+require ('../Vendor/SplClassLoader.php');
 $OCFramLoader = new SplClassLoader('Application', '../');
 $OCFramLoader->register();
 

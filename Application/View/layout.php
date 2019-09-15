@@ -7,14 +7,14 @@
     
     <meta charset="utf-8" />
     
-    <link rel="stylesheet" href="/css/Envision.css" type="text/css" />
+    <link rel="stylesheet" href="../Web/Css/Envision.css" type="text/css" />
   </head>
   
   <body>
     <div id="wrap">
       <header>
-        <h1><a href="/">Appli et cache en php</a></h1>
-        <p>Comment ça, il n'y a presque rien ?</p>
+        <h1><a href="/">Cache en php</a></h1>
+        <!-- <p>Comment ça, il n'y a presque rien ?</p> -->
       </header>
       
       <nav>
@@ -28,7 +28,7 @@
         <section id="main">
           <!--?php if ($user->hasFlash()) echo '<p style="text-align: center;">', $user->getFlash(), '</p>'; ?> -->
           
-          <?= $content; ?>
+          <?= $content ?>
         </section>
       </div>
     

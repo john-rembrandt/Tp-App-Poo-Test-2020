@@ -1,5 +1,5 @@
 <?php
-        echo ('<p>hello world<p>');
+        //echo ('<p>hello world<p>');
         /*
         foreach($news as $donnee)
         {
@@ -16,6 +16,7 @@
         }
         
         */
+
         foreach ($news as $news)
         {
           ?>
