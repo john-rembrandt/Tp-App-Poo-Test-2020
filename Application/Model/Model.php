@@ -2,8 +2,6 @@
 
 namespace Application\Model;
 
-use PDO;
-
 use Lib\PDOFactory;
 
 class Model

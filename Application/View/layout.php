@@ -28,7 +28,7 @@
         <section id="main">
           <!--?php if ($user->hasFlash()) echo '<p style="text-align: center;">', $user->getFlash(), '</p>'; ?> -->
           
-          <?= $content ?>
+          <?php echo $content; ?>
         </section>
       </div>
     
