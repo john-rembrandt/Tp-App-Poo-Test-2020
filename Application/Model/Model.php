@@ -3,6 +3,7 @@
 namespace Application\Model;
 
 use Lib\PDOFactory;
+use PDO;
 
 class Model
 {
@@ -56,7 +57,7 @@ class Model
         
         $this->comments->execute();
         
-        //$this->comments->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'CommentsModel');
+        $this->comments->setFetchMode(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, 'CommentsModel');
         
         return $this->comments->fetchAll();
          

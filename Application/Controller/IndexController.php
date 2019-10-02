@@ -13,6 +13,9 @@ class IndexController
     public $cacheIndex;
     
     public $page;
+    
+    //public $commentsFile = __DIR__.'\..\Application\View\vueComments.php';
+    //public $contentFile = __DIR__.'\..\Application\View\vueNews.php'; 
 
     public function __CONSTRUCT()
     {  
@@ -32,8 +35,17 @@ class IndexController
         }
         else
         {
+            if($_GET['choix'] = 'comments')
+            {
+                $this->page->contentFile = $this->page->commentsFile;
+                $this->cacheIndex->creerCache($this->cacheIndex->fichierCache, $this->page->affichageVue($this->donnee->getSelectionCommentaire()));
+            }
+            else
+            {
+                $this->page->contentFile = $this->page->newsFile;
+                $this->cacheIndex->creerCache($this->cacheIndex->fichierCache, $this->page->affichageVue($this->donnee->getSelectionListe())); 
+            }
              
-            $this->cacheIndex->creerCache($this->cacheIndex->fichierCache, $this->page->affichageVue($this->donnee->getSelectionCommentaire()));  
         }
       }
     
