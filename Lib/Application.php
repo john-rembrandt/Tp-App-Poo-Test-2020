@@ -18,7 +18,7 @@ abstract class Application
 
     $this->name = '';
   }
-
+/*
   public function getController()
   {
     $router = new Router;
@@ -64,7 +64,7 @@ abstract class Application
     $controllerClass = 'App\\'.$this->name.'\\Modules\\'.$matchedRoute->module().'\\'.$matchedRoute->module().'Controller';
     return new $controllerClass($this, $matchedRoute->module(), $matchedRoute->action());
   }
-
+*/
   abstract public function run();
 
   public function httpRequest()

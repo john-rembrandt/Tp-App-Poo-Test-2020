@@ -4,6 +4,7 @@ namespace Application\Controller;
 use Application\Cache\Cache;
 use Application\Model\Model;
 use Lib\Page;
+use Lib\HTTPRequest;
 
 class IndexController
 {
@@ -14,6 +15,8 @@ class IndexController
     
     public $page;
     
+    public $httpRequest;
+    
     //public $commentsFile = __DIR__.'\..\Application\View\vueComments.php';
     //public $contentFile = __DIR__.'\..\Application\View\vueNews.php'; 
 
@@ -23,6 +26,7 @@ class IndexController
         $this->donnee = new Model();
         $this->cacheIndex = new Cache();
         $this->page = new Page();
+        $this->httpRequest = new HTTPRequest();
         
     }
 
@@ -35,12 +39,13 @@ class IndexController
         }
         else
         {
-            if($_GET['choix'] = 'comments')
+            if($_GET['choix'] == 'comments')
             {
                 $this->page->contentFile = $this->page->commentsFile;
                 $this->cacheIndex->creerCache($this->cacheIndex->fichierCache, $this->page->affichageVue($this->donnee->getSelectionCommentaire()));
             }
-            else
+            
+            if($_GET['choix'] == 'liste')
             {
                 $this->page->contentFile = $this->page->newsFile;
                 $this->cacheIndex->creerCache($this->cacheIndex->fichierCache, $this->page->affichageVue($this->donnee->getSelectionListe())); 

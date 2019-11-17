@@ -1,6 +1,6 @@
 <?php
-
-        foreach ($news as $news)
+/*
+foreach ($news as $news)
         {
           ?>
           <h2><a href="news-<?= $news['id'] ?>.html"><?= $news['titre'] ?></a></h2>
@@ -8,5 +8,12 @@
           <?php
         }
 
-        
-  
+*/
+foreach($news as $news => $value)
+{
+    $test = $news->{$news}->$value;
+    
+    return $test;
+}
+
+
