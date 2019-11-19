@@ -1,5 +1,5 @@
 <?php
- 
+
 foreach ($news as $news)
         {
           ?>
@@ -9,12 +9,4 @@ foreach ($news as $news)
         }
 
 
-/*
-foreach($news as $news => $value)
-{
-    $test = $news->{$news}->$value;
-    
-    return $test;
-}
 
-*/
