@@ -42,13 +42,17 @@ class IndexController
             if($_GET['choix'] == 'comments')
             {
                 $this->page->contentFile = $this->page->commentsFile;
-                $this->cacheIndex->creerCache($this->cacheIndex->fichierCache, $this->page->affichageVue($this->donnee->getSelectionCommentaire()));
+                
+                $this->cacheIndex->creerCache($this->cacheIndex->fichierCache,
+                $this->page->affichageVue($this->donnee->getSelectionCommentaire()));
             }
             
             if($_GET['choix'] == 'liste')
             {
                 $this->page->contentFile = $this->page->newsFile;
-                $this->cacheIndex->creerCache($this->cacheIndex->fichierCache, $this->page->affichageVue($this->donnee->getSelectionListe())); 
+                
+                $this->cacheIndex->creerCache($this->cacheIndex->fichierCache,
+                $this->page->affichageVue($this->donnee->getSelectionListe())); 
             }
              
         }
