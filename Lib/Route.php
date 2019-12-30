@@ -1,5 +1,7 @@
 <?php
 
+namespace Lib;
+
 class Route
 {
   protected $action;

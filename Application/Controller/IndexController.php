@@ -26,7 +26,7 @@ class IndexController
         $this->donnee = new Model();
         $this->cacheIndex = new Cache();
         $this->page = new Page();
-        $this->httpRequest = new HTTPRequest();
+        //$this->httpRequest = new HTTPRequest(); A intégrer
         
     }
 

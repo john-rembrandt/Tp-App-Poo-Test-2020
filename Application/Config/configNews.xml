@@ -1,4 +1,7 @@
-<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+
+<!DOCTYPE routes SYSTEM "doc1.dtd">
+
 <routes>
-  <route url="/news.html" module="News" action="index" ></route>
+	<route url='/Projet-de-cache-en-php4/Test/fichierDeTestRouter.php' module="News" action="index"></route>
 </routes>
