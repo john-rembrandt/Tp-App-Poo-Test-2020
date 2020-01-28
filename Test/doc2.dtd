@@ -1,0 +1,6 @@
+<!ELEMENT routes (route)*>
+<!ELEMENT route (#PCDATA)>
+<!ATTLIST route url CDATA #REQUIRED
+                module CDATA #REQUIRED
+                action CDATA #REQUIRED
+                vars CDATA #IMPLIED>
