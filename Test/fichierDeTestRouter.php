@@ -11,10 +11,10 @@ use \Lib\HTTPRequest;
 use \Lib\HTTPResponse;
 */
 
-require 'C:\wamp64\www\Projet-de-cache-en-php4\Lib\HTTPRequest.php';
-require 'C:\wamp64\www\Projet-de-cache-en-php4\Lib\HTTPResponse.php';
-require 'C:\wamp64\www\Projet-de-cache-en-php4\Lib\Router.php';
-require 'C:\wamp64\www\Projet-de-cache-en-php4\Lib\Route.php';
+require 'C:\wamp64\www\Tp-App-Poo-Test-2020\Lib\HTTPRequest.php';
+require 'C:\wamp64\www\Tp-App-Poo-Test-2020\Lib\HTTPResponse.php';
+require 'C:\wamp64\www\Tp-App-Poo-Test-2020\Lib\Router.php';
+require 'C:\wamp64\www\Tp-App-Poo-Test-2020\Lib\Route.php';
 
 
 //$testRouter = new Router();
