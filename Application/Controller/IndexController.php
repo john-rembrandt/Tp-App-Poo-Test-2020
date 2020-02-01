@@ -5,6 +5,8 @@ use Application\Cache\Cache;
 use Application\Model\Model;
 use Lib\Page;
 use Lib\HTTPRequest;
+use Lib\Router;
+use Lib\Route;
 
 class IndexController
 {
@@ -17,6 +19,10 @@ class IndexController
     
     public $httpRequest;
     
+    public $router;
+    
+    public $route;
+    
     //public $commentsFile = __DIR__.'\..\Application\View\vueComments.php';
     //public $contentFile = __DIR__.'\..\Application\View\vueNews.php'; 
 
@@ -26,7 +32,9 @@ class IndexController
         $this->donnee = new Model();
         $this->cacheIndex = new Cache();
         $this->page = new Page();
-        //$this->httpRequest = new HTTPRequest(); A intégrer
+        $this->httpRequest = new HTTPRequest();
+        $this->router = new Router();
+        $this->route = new Route();
         
     }
 
