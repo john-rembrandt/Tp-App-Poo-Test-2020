@@ -93,5 +93,6 @@ $testUrl = new HTTPRequest();
 
 var_dump($testUrl -> requestURI());
 
-$testApp -> getController();
+var_dump(explode('-', $testUrl->requestURI()));
+//$testApp -> getController();
 
