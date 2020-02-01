@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 
-<!DOCTYPE routes SYSTEM "doc1.dtd">
+<!-- <!DOCTYPE routes SYSTEM "doc1.dtd"> -->
 
 <routes>
-	<route url='/Projet-de-cache-en-php4/Test/fichierDeTestRouter.php' module="News" action="index"></route>
+	<route url='/Tp-App-Poo-Test-2020/Web/bootstrap.php' module="News" action="index"></route>
 </routes>

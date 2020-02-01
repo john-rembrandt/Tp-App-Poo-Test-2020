@@ -44,10 +44,13 @@ class IndexController
         $router = new Router;
         
         $xml = new \DOMDocument;
-        $xml->load(__DIR__.'/../../App/'.$this->name.'/Config/routes.xml');
+        $xml->load(__DIR__.'\..\Config\configNews.xml');
         
         $routes = $xml->getElementsByTagName('route');
         
+        return $xml;
+        
+        /*
         // On parcourt les routes du fichier XML.
         foreach ($routes as $route)
         {
@@ -83,9 +86,9 @@ class IndexController
         // On instancie le contrôleur.
         $controllerClass = 'App\\'.$this->name.'\\Modules\\'.$matchedRoute->module().'\\'.$matchedRoute->module().'Controller';
         return new $controllerClass($this, $matchedRoute->module(), $matchedRoute->action());
+    } */
+    
     }
-    
-    
     
     public function executeIndex()
     {
@@ -93,7 +96,7 @@ class IndexController
         
         //$this->route = new Route();
         
-        var_dump($this->router->getRoute($url));
+        var_dump($this->getController());
         
        
         /* if($this->cacheIndex->dateCreationCache() == true)
