@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 
-<!DOCTYPE routes SYSTEM "doc2.dtd">
+<!-- <!DOCTYPE routes SYSTEM "doc2.dtd"> -->
 
 <routes>
 	<route url="/" module="News" action="index" />
