@@ -1,7 +1,11 @@
-<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 
-<!DOCTYPE routes SYSTEM "doc1.dtd">
+<!-- <!DOCTYPE routes SYSTEM "doc1.dtd"> -->
 
 <routes>
+<<<<<<< HEAD
 	<route url='/Tp-App-Poo-Test-2020/Test/fichierDeTestRouter.php' module="News" action="index"></route>
+=======
+	<route url='/Tp-App-Poo-Test-2020/Web/bootstrap.php' module="News" action="index"></route>
+>>>>>>> eef80a8a17b32dcf0e5364ef125cd8f0e670a286
 </routes>
