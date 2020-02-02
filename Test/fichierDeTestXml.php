@@ -5,7 +5,7 @@ class TestXml
     public function getXml()
     {
         $xml = new DOMDocument;
-        $xml->load(__DIR__.'configNews2.xml');
+        $xml->load(__DIR__.'/configNews2.xml');
 
         $routes = $xml->getElementsByTagName('route');
 
@@ -14,7 +14,7 @@ class TestXml
           //$vars = [];
 
             var_dump($route);
-
+            
         }
     
     }
