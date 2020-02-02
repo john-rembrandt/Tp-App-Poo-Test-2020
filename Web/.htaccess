@@ -1,7 +1,7 @@
-RewriteEngine On
+#RewriteEngine On
 
-RewriteRule ^admin/ bootstrap.php?app=Backend [QSA,L]
+#RewriteRule ^admin/ bootstrap.php?app=Backend [QSA,L]
 
-RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-f
 
-RewriteRule ^(.*)$ bootstrap.php?app=Frontend [QSA,L]
+#RewriteRule ^(.*)$ bootstrap.php?app=Frontend [QSA,L]

@@ -21,10 +21,11 @@ class IndexController
     
     public $router;
     
-    public $route;
+    //public $route;
     
     //public $commentsFile = __DIR__.'\..\Application\View\vueComments.php';
     //public $contentFile = __DIR__.'\..\Application\View\vueNews.php'; 
+    public $routing = __DIR__.'/../../Application/Config/configNews.xml';
 
     public function __CONSTRUCT()
     {  
@@ -33,7 +34,7 @@ class IndexController
         $this->cacheIndex = new Cache();
         $this->page = new Page();
         $this->httpRequest = new HTTPRequest();
-        $this->router = new Router();
+        //$this->router = new Router();
         
         
     }
@@ -44,19 +45,22 @@ class IndexController
         $router = new Router;
         
         $xml = new \DOMDocument;
-        $xml->load(__DIR__.'\..\Config\configNews.xml');
+        $xml->load($this->routing);
         
         $routes = $xml->getElementsByTagName('route');
         
-        return $xml;
+        $router->routes = $routes;
         
-        /*
+        //return $routes;
+        
+        
         // On parcourt les routes du fichier XML.
         foreach ($routes as $route)
         {
             $vars = [];
+            return $vars;
             
-            // On regarde si des variables sont présentes dans l'URL.
+           /*  // On regarde si des variables sont présentes dans l'URL.
             if ($route->hasAttribute('vars'))
             {
                 $vars = explode(',', $route->getAttribute('vars'));
@@ -64,8 +68,10 @@ class IndexController
             
             // On ajoute la route au routeur.
             $router->addRoute(new Route($route->getAttribute('url'), $route->getAttribute('module'), $route->getAttribute('action'), $vars));
+            }
+        */
         }
-        
+        /*
         try
         {
             // On récupère la route correspondante à l'URL.
@@ -86,19 +92,19 @@ class IndexController
         // On instancie le contrôleur.
         $controllerClass = 'App\\'.$this->name.'\\Modules\\'.$matchedRoute->module().'\\'.$matchedRoute->module().'Controller';
         return new $controllerClass($this, $matchedRoute->module(), $matchedRoute->action());
-    } */
-    
+    } 
+    */
     }
     
     public function executeIndex()
     {
-        $url = $this->httpRequest->requestURI();
+        //$url = $this->httpRequest->requestURI();
         
         //$this->route = new Route();
         
         var_dump($this->getController());
         
-       
+    }
         /* if($this->cacheIndex->dateCreationCache() == true)
         {
             $this->cacheIndex->lireCache();
@@ -120,8 +126,6 @@ class IndexController
                 $this->cacheIndex->creerCache($this->cacheIndex->fichierCache,
                 $this->page->affichageVue($this->donnee->getSelectionListe())); 
             } 
-             
-        }*/
+             */
+        
       }
-    
-}

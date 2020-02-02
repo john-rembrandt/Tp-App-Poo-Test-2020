@@ -4,7 +4,7 @@ namespace Lib;
 
 class Router
 {
-  protected $routes = [];
+  public $routes = [];
 
   const NO_ROUTE = 1;
 

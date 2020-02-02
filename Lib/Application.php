@@ -1,4 +1,4 @@
-<?php
+<?php /*
 namespace Lib;
 
 abstract class Application
@@ -11,14 +11,14 @@ abstract class Application
 
   public function __construct()
   {
-    $this->httpRequest = new HTTPRequest($this);
-    $this->httpResponse = new HTTPResponse($this);
+    //$this->httpRequest = new HTTPRequest($this);
+    //$this->httpResponse = new HTTPResponse($this);
     //$this->user = new User($this);
     //$this->config = new Config($this);
 
     $this->name = '';
   }
-/*
+
   public function getController()
   {
     $router = new Router;
@@ -64,7 +64,7 @@ abstract class Application
     $controllerClass = 'App\\'.$this->name.'\\Modules\\'.$matchedRoute->module().'\\'.$matchedRoute->module().'Controller';
     return new $controllerClass($this, $matchedRoute->module(), $matchedRoute->action());
   }
-*/
+
   abstract public function run();
 
   public function httpRequest()
@@ -91,4 +91,4 @@ abstract class Application
   {
     return $this->user;
   }
-}
+} */
