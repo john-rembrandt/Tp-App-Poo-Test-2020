@@ -9,14 +9,29 @@ class TestXml
 
         $routes = $xml->getElementsByTagName('route');
 
+//         foreach ($routes as $route)
+//         {
+//           //$vars = [];
+
+//             var_dump($route);
+            
+//         }
+        
+        // On parcourt les routes du fichier XML.
         foreach ($routes as $route)
         {
-          //$vars = [];
-
-            var_dump($route);
+            $vars = [];
             
+            // On regarde si des variables sont présentes dans l'URL.
+            if ($route->hasAttribute('vars'))
+            {
+                $vars = explode(',', $route->getAttribute('vars'));
+                var_dump($vars);
+            }
+            
+            /* // On ajoute la route au routeur.
+            $router->addRoute(new Route($route->getAttribute('url'), $route->getAttribute('module'), $route->getAttribute('action'), $vars)); */
         }
-    
     }
     
 
@@ -24,3 +39,5 @@ class TestXml
 
 $testRouting = new TestXml();
 $testRouting->getXml(); 
+
+

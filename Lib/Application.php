@@ -1,4 +1,4 @@
-<?php /*
+<?php
 namespace Lib;
 
 abstract class Application
@@ -91,4 +91,4 @@ abstract class Application
   {
     return $this->user;
   }
-} */
+}
