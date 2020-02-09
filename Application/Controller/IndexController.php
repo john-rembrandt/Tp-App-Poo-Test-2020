@@ -5,6 +5,7 @@ use Application\Cache\Cache;
 use Application\Model\Model;
 use Lib\Page;
 use Lib\HTTPRequest;
+use Lib\HTTPResponse;
 use Lib\Router;
 use Lib\Route;
 
@@ -19,6 +20,7 @@ class IndexController
     
     public $httpRequest;
     
+    public $httpResponse;
     //public $router;
     
     //public $route;
@@ -34,8 +36,7 @@ class IndexController
         $this->cacheIndex = new Cache();
         $this->page = new Page();
         $this->httpRequest = new HTTPRequest();
-        //$this->router = new Router();
-        
+        $this->httpResponse = new HTTPResponse();        
         
     }
     
