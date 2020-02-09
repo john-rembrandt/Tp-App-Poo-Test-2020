@@ -19,7 +19,7 @@ class IndexController
     
     public $httpRequest;
     
-    public $router;
+    //public $router;
     
     //public $route;
     
@@ -49,7 +49,7 @@ class IndexController
         
         $routes = $xml->getElementsByTagName('route');
         
-        $router->routes = $routes;
+        //$router->routes = $routes;
         
         //return $routes;
         
@@ -58,19 +58,20 @@ class IndexController
         foreach ($routes as $route)
         {
             $vars = [];
-            return $vars;
             
-           /*  // On regarde si des variables sont présentes dans l'URL.
+            
+             // On regarde si des variables sont présentes dans l'URL.
             if ($route->hasAttribute('vars'))
             {
                 $vars = explode(',', $route->getAttribute('vars'));
             }
             
             // On ajoute la route au routeur.
-            $router->addRoute(new Route($route->getAttribute('url'), $route->getAttribute('module'), $route->getAttribute('action'), $vars));
-            }
-        */
+            $router->addRoute(new Route($route->getAttribute('url'), $route->getAttribute('module'),
+            $route->getAttribute('action'), $vars));
+        
         }
+        var_dump($router->routes);
         /*
         try
         {
@@ -102,7 +103,7 @@ class IndexController
         
         //$this->route = new Route();
         
-        var_dump($this->getController());
+        $this->getController();
         
     }
         /* if($this->cacheIndex->dateCreationCache() == true)
@@ -127,5 +128,4 @@ class IndexController
                 $this->page->affichageVue($this->donnee->getSelectionListe())); 
             } 
              */
-        
-      }
+}
