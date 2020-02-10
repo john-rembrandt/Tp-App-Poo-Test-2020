@@ -168,8 +168,11 @@ class TestXml
              // On ajoute la route au routeur.
             $router->addRoute(new Route($route->getAttribute('url'),
             $route->getAttribute('module'), $route->getAttribute('action'), $vars));
-            var_dump($router->routes);
+            
         }
+        
+        var_dump($router->routes);//affiche les routes chargés du fichier xml configNews2.xml
+        
     }
     
 
