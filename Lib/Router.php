@@ -11,7 +11,7 @@ class Router
   public function addRoute(Route $route)
   {
     if (!in_array($route, $this->routes))
-    {
+    {  
       $this->routes[] = $route;
     }
   }
