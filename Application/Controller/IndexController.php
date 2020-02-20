@@ -14,7 +14,7 @@ class IndexController
     
     public $donnee;
 
-    public $cacheIndex;
+    //public $cacheIndex;
     
     public $page;
     
@@ -33,7 +33,7 @@ class IndexController
     {  
         
         $this->donnee = new Model();
-        $this->cacheIndex = new Cache();
+        //$this->cacheIndex = new Cache();
         $this->page = new Page();
         $this->httpRequest = new HTTPRequest();
         $this->httpResponse = new HTTPResponse();        
