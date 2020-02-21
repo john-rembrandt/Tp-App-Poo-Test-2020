@@ -5,6 +5,6 @@
 <routes>
 	<route url='/Tp-App-Poo-Test-2020/Test/fichierDeTestRouter.php' module="News" action="index" vars="salut"></route>
 	<route url='/Tp-App-Poo-Test-2020/Web/bootstrap.php' module="News" action="index" vars="lulu"></route>
-	<route url='/hello-world' module="News" action="show" vars="hihi"></route>
+	<route url='/hello-world\.php' module="News" action="show" vars="hihi"></route>
 	<route url='hello-lulu' vars="voila"></route>
 </routes>

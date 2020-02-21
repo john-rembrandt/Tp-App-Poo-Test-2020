@@ -1,7 +1,7 @@
 <?php
 namespace Application\Controller;
 
-use Application\Cache\Cache;
+//use Application\Cache\Cache;
 use Application\Model\Model;
 use Lib\Page;
 use Lib\HTTPRequest;
@@ -73,9 +73,13 @@ class IndexController
         
         }
         
-        var_dump($router->routes);
+        //var_dump($router->routes);
+        echo "valeur de httpRequest->requestURI()";
         var_dump($this->httpRequest->requestURI());
-        var_dump($router->getRoute($this->httpRequest->requestURI()));
+        
+        //var_dump($router->getRoute($this->httpRequest->requestURI()));
+        echo $route->module(),$route->action(),
+        $route->vars();
         /*
         try
         {
