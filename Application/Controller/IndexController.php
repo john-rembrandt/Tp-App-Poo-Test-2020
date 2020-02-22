@@ -76,15 +76,12 @@ class IndexController
         //var_dump($router->routes);
         echo "valeur de httpRequest->requestURI()";
         var_dump($this->httpRequest->requestURI());
-<<<<<<< HEAD
+
         //var_dump($router->getRoute($this->httpRequest->requestURI()));
-=======
         
-        //var_dump($router->getRoute($this->httpRequest->requestURI()));
-        echo $route->module(),$route->action(),
-        $route->vars();
->>>>>>> cbf841314d3a15f6546db113a70fe2b989a6a710
-        /*
+        //$matchesRoute = $router->getRoute($this->httpRequest->requestURI());
+        //var_dump($matchesRoute);
+        
         try
         {
             // On récupère la route correspondante à l'URL.
@@ -103,8 +100,9 @@ class IndexController
         $_GET = array_merge($_GET, $matchedRoute->vars());
         
         var_dump($_GET);
+        var_dump();
         
-        
+        /*
         // On instancie le contrôleur.
         $controllerClass = 'App\\'.$this->name.'\\Modules\\'.$matchedRoute->module().'\\'.$matchedRoute->module().'Controller';
         return new $controllerClass($this, $matchedRoute->module(), $matchedRoute->action());
