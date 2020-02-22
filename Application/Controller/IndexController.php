@@ -75,7 +75,7 @@ class IndexController
         
         var_dump($router->routes);
         var_dump($this->httpRequest->requestURI());
-        var_dump($router->getRoute($this->httpRequest->requestURI()));
+        //var_dump($router->getRoute($this->httpRequest->requestURI()));
         /*
         try
         {
