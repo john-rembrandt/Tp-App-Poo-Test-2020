@@ -100,7 +100,8 @@ class IndexController
         $_GET = array_merge($_GET, $matchedRoute->vars());
         
         var_dump($_GET);
-        var_dump();
+        var_dump($matchedRoute->hasVars());
+        
         
         /*
         // On instancie le contrôleur.
