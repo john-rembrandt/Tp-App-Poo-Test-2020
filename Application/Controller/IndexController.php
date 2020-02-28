@@ -76,14 +76,14 @@ class IndexController
         //var_dump($router->routes);
         echo "valeur de httpRequest->requestURI()";
         var_dump($this->httpRequest->requestURI());
-<<<<<<< HEAD
+
         //var_dump($router->getRoute($this->httpRequest->requestURI()));
-=======
+
         
         //var_dump($router->getRoute($this->httpRequest->requestURI()));
-        echo $route->module(),$route->action(),
-        $route->vars();
->>>>>>> cbf841314d3a15f6546db113a70fe2b989a6a710
+        //echo $route->module(),$route->action(),
+        //$route->vars();
+        
         /*
         try
         {
