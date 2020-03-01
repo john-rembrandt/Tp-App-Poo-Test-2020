@@ -89,7 +89,7 @@ class Route
     return $this->varsNames;
   }
   
-  public function url()
+  public function url() // créer pour les tests, pas la dans le code source de base
   {
       return $this->url;
   }

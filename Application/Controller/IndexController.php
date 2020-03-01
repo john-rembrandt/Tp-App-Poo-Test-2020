@@ -70,10 +70,11 @@ class IndexController
             // On ajoute la route au routeur.
             $router->addRoute(new Route($route->getAttribute('url'), $route->getAttribute('module'),
             $route->getAttribute('action'), $vars));
+            echo "les fameuse variable \$vars";
             var_dump($vars);
         }
-        
-        //var_dump($router->routes);
+        echo "les routes recues et qui sont stocké dans le router sous forme de tableau";
+        var_dump($router->routes);
         echo "valeur de httpRequest->requestURI()";
         var_dump($this->httpRequest->requestURI());
 
@@ -107,9 +108,9 @@ class IndexController
         }
         
         // On ajoute les variables de l'URL au tableau $_GET.
-        $_GET = array_merge($_GET, $matchedRoute->vars());
-        
-        echo "_GET";
+        //$_GET = array_merge($_GET, $matchedRoute->vars());
+        //$_GET = $route->vars();
+        echo "\$_GET";
         var_dump($_GET);
         echo "HASVARS()";
         var_dump($matchedRoute->hasVars());
