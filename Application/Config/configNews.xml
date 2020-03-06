@@ -6,5 +6,7 @@
 	<route url='/Tp-App-Poo-Test-2020/Web/' module="News" action="index" vars="salut"></route>
 	<route url='/index.php' module="tsoinTsoin" action="index" vars="lulu,lolo"></route>
 	<route url='/hello-world.php' module="News" action="show" vars="hihi"></route>
-	<route url='hello-lulu' vars="voila"></route>
+	<route url='/' vars="voila"></route>
+	<route url='/news-(.+)-([0-9]+)\.php' module="News" action="show" vars="slug,id" />
+	<route url='/news-7.php' module="News" action="index" vars="slug,id" />
 </routes>

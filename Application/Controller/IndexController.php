@@ -67,16 +67,14 @@ class IndexController
         }
         echo "les routes recues et qui sont stocké dans le router sous forme de tableau";
         var_dump($router->routes);
+        
         echo "valeur de httpRequest->requestURI()";
         var_dump($this->httpRequest->requestURI());
 
         // var_dump($router->getRoute($this->httpRequest->requestURI()));
 
         // var_dump($router->getRoute($this->httpRequest->requestURI()));
-        // echo $route->module(),$route->action(),
-        // $route->vars();
-
-        // $matchesRoute = $router->getRoute($this->httpRequest->requestURI());
+        
         // var_dump($matchesRoute);
 
         try {
@@ -93,21 +91,30 @@ class IndexController
         }
 
         // On ajoute les variables de l'URL au tableau $_GET.
-        // $_GET = array_merge($_GET, $matchedRoute->vars());
-
-        // $_GET = $route->vars();
+        //$_GET = array_merge($_GET, $matchedRoute->vars());
+        $varsValues = array_merge($_GET, $matchedRoute->vars());
+        
+        echo " test du retour array_merge ";
+        var_dump($varsValues);
+        
         echo "\$_GET";
         var_dump($_GET);
+        
         echo "HASVARS()";
         var_dump($matchedRoute->hasVars());
-        echo "MODULE/)";
+        
+        echo "MODULE()";
         var_dump($matchedRoute->module());
+        
         echo "ACTION()";
         var_dump($matchedRoute->action());
+        
         echo "URL()";
         var_dump($matchedRoute->url());
+        
         echo "VARSNAMES()";
         var_dump($matchedRoute->varsNames());
+        
         echo "VARS()";
         var_dump($matchedRoute->vars());
         
