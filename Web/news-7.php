@@ -1,6 +1,6 @@
 <?php
 
-echo "Web/index.php";
+//echo "Web/index.php";
 
 require ('../Vendor/SplClassLoader.php');
 $OCFramLoader = new SplClassLoader('Application', '../');

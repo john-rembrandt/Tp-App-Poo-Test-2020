@@ -3,11 +3,11 @@ namespace Application\Controller;
 
 // use Application\Cache\Cache;
 use Application\Model\Model;
-use Lib\Page;
 use Lib\HTTPRequest;
 use Lib\HTTPResponse;
-use Lib\Router;
+use Lib\Page;
 use Lib\Route;
+use Lib\Router;
 
 class IndexController
 {
